@@ -1,0 +1,7 @@
+library(ggplot2)
+
+# Assuming you have data in variables 'vocabulary_mastery' and 'writing_proficiency'
+ggplot(data = data.frame(vocabulary_mastery, writing_proficiency), aes(x = vocabulary_mastery, y = writing_proficiency)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Vocabulary Mastery", y = "Writing Proficiency")
